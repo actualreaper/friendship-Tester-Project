@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Friendship Test
+{% endblock %}
+
+{% block main %}
+
+<form action="/test" method="get">
+    <input type="hidden" name="url">
+</form>
+
+<form action="/test" method="post">
+
+{% for i in range(10) %}
+
+<div class="paragraph">
+
+<p>Question {{ i+1 }}: {{ questions[i] }} </p>
+
+<input type="radio" name="answer{{ i+1 }}" value="{{ ansList[i][0] }}">
+<label for="{{ ansList[i][0] }}">{{ ansList[i][0] }}</label><br>
+<input type="radio" name="answer{{ i+1 }}" value="{{ ansList[i][1] }}">
+<label for="{{ ansList[i][1] }}">{{ ansList[i][1] }}</label><br>
+<input type="radio" name="answer{{ i+1 }}" value="{{ ansList[i][2] }}">
+<label for="{{ ansList[i][2] }}">{{ ansList[i][2] }}</label>
+
+</div>
+
+{% endfor %}
+
+<input type="hidden" name="urlName" value="{{ name }}">
+
+<br>
+<button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
+{% endblock %}

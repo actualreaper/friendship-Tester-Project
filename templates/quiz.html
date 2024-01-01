@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quiz
+{% endblock %}
+
+
+{% block main %}
+
+<h4 class="paragraph">
+  <b>Important: You can edit the questions given if you do not like them or you can omit them altogether if you want to.
+  You can similarly change the multiple choice answers. Just remember to write the correct and wrong answers in their given spaces.
+  Also remember to include you name in the questions as given in the sample questions.</b>
+</h4>
+
+<form action="/quiz" method="post" style="margin-top:30px">
+{% for i in range(10) %}
+    <div class="container">
+      {% if checker == 0 %}
+        <input type="text" class="form-control" name="question{{i+1}}" value="{{questions[numlist[i]]['question']}}">
+        <small id="HelpBlock" class="form-text text-muted">
+          Question NO.{{ i+1 }}
+        </small>
+        <div class="row p-3">
+
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Correct Answer" value="{{ samples[numlist[i]]['c_answer'] }}" name="{{i+1}}c_answer">
+            <small id="HelpBlock" class="form-text text-muted">
+              Correct Answer
+            </small>
+          </div>
+
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Wrong Answer" value="{{ samples[numlist[i]]['w_answer1'] }}" name="{{i+1}}w_answer1">
+            <small id="HelpBlock" class="form-text text-muted">
+              Wrong Answer
+            </small>
+          </div>
+
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholer="Wrong Answer" value="{{ samples[numlist[i]]['w_answer2'] }}" name="{{i+1}}w_answer2">
+            <small id="HelpBlock" class="form-text text-muted">
+              Wrong Answer
+            </small>
+          </div>
+        </div>
+
+      {% else %}
+
+        <input type="text" class="form-control" name="question{{i+1}}" value="{{ answers[i]['question'] }}">
+        <small id="HelpBlock" class="form-text text-muted">
+          Question NO.{{ i+1 }}
+        </small>
+        <div class="row p-3">
+
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Correct Answer" value="{{ answers[i]['c_answer'] }}" name="{{i+1}}c_answer">
+            <small id="HelpBlock" class="form-text text-muted">
+              Correct Answer
+            </small>
+          </div>
+
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholder="Wrong Answer" value="{{ answers[i]['w_answer1'] }}" name="{{i+1}}w_answer1">
+            <small id="HelpBlock" class="form-text text-muted">
+              Wrong Answer
+            </small>
+          </div>
+
+          <div class="col-sm">
+            <input type="text" class="form-control" placeholer="Wrong Answer" value="{{ answers[i]['w_answer2'] }}" name="{{i+1}}w_answer2">
+            <small id="HelpBlock" class="form-text text-muted">
+              Wrong Answer
+            </small>
+          </div>
+        </div>
+
+      {% endif %}
+
+    </div>
+{% endfor %}
+<button class="btn btn-primary" type="submit">Create my quiz</button>
+</form>
+
+{% endblock %}

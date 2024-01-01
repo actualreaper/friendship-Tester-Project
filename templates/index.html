@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    {% if session["user_id"] %}
+        <p class="paragraph">
+            Welcome to Friendship Tester, where bonds are put to the test in a fun and engaging way! At Friendship Tester, we believe that true friendships are built on shared experiences,
+            understanding, and a whole lot of laughter. Our platform was created with the intention of bringing friends closer together, while also injecting some excitement into the mix.
+            How does it work? It's simple! With your help, we generate a set of ten thought-provoking, multiple-choice questions tailored specifically for your friends. These questions
+            cover a wide range of topics, from personal preferences to fun hypothetical scenarios. Once you've customized the quiz, you can send it off to your friends and eagerly await
+            their results. But Friendship Tester is more than just a scorecard. It's an opportunity to connect with your friends on a deeper level, exploring their unique perspectives
+            and discovering new things about each other along the way. After all, what better way to strengthen your friendship than through a playful competition of wits? Our team at
+            Friendship Tester is dedicated to providing you with an enjoyable and seamless experience. We've designed our platform to be user-friendly, allowing you to easily create,
+            send, and view the quiz results. Your privacy is also a top priority, so rest assured that any information shared within the quiz remains strictly confidential. So why wait?
+            Dive into the wonderful world of Friendship Tester and uncover the hidden depths of your friendships. Laugh together, share stories, and perhaps even learn a thing or two
+            about your closest companions. Get ready to embark on a friendship-testing journey like no other!.
+            Click this link to create a quiz: <a href="/quiz">Create a quiz</a>
+        </p>
+    {% else %}
+        <p class="paragraph">
+            Welcome to Friendship Tester, where bonds are put to the test in a fun and engaging way! At Friendship Tester, we believe that true friendships are built on shared experiences,
+            understanding, and a whole lot of laughter. Our platform was created with the intention of bringing friends closer together, while also injecting some excitement into the mix.
+            How does it work? It's simple! With your help, we generate a set of ten thought-provoking, multiple-choice questions tailored specifically for your friends. These questions
+            cover a wide range of topics, from personal preferences to fun hypothetical scenarios. Once you've customized the quiz, you can send it off to your friends and eagerly await
+            their results. But Friendship Tester is more than just a scorecard. It's an opportunity to connect with your friends on a deeper level, exploring their unique perspectives
+            and discovering new things about each other along the way. After all, what better way to strengthen your friendship than through a playful competition of wits? Our team at
+            Friendship Tester is dedicated to providing you with an enjoyable and seamless experience. We've designed our platform to be user-friendly, allowing you to easily create,
+            send, and view the quiz results. Your privacy is also a top priority, so rest assured that any information shared within the quiz remains strictly confidential. So why wait?
+            Dive into the wonderful world of Friendship Tester and uncover the hidden depths of your friendships. Laugh together, share stories, and perhaps even learn a thing or two
+            about your closest companions. Get ready to embark on a friendship-testing journey like no other! Join us today and let the games begin!.
+        <p>
+        <div class="paragraph1">
+            <h5>
+                <p>To create a quiz, you have to login first</p>
+                <a href="/login">Click here to Log in</a> Or <a href="/register">click here to register</a>
+            </h5>
+        </div>
+        <p>
+        </p>
+    {% endif %}
+{% endblock %}

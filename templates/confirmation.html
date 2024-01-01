@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Confirmation
+{% endblock %}
+
+{% block main %}
+    <h3 class="textHeading">
+        <b>You have sucessfully created a quiz. To play the quiz go to this link or send this link to your friends:</b>
+    </h3>
+    <h4>
+        <a href="{{ url }}"> {{ url }}</a>
+    </h4>
+{% endblock %}

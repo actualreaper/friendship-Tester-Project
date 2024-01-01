@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quiz Result
+{% endblock %}
+
+{% block main %}
+
+{% if numbers == 10 %}
+
+    <h3 class="result">
+        <strong>Congratulations! You got {{ numbers }} out of 10 Marks in a quiz about {{ name }}</strong>
+    </h3>
+
+{% else %}
+
+    <h3 class="result">
+        <strong>You got {{ numbers }} out of 10 Marks in a quiz about {{ name }}</strong>
+    </h3>
+
+    <div class="paragraph">
+        <h3>
+            <strong>Here are the questions you got wrong:</strong>
+        </h3>
+
+        {% for i in range(length) %}
+        <h4>
+            <ul>
+                <li><strong>Question: </strong>{{ w_questions[i] }} <br><strong>The Answer you gave: </strong>{{ wAns[i] }} <br> <strong>Correct Answer: </strong>{{cAns[i]}} </li>
+            </ul>
+        </h4>
+        {% endfor %}
+
+    </div>
+
+{% endif %}
+
+{% endblock %}

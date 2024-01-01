@@ -1,0 +1,66 @@
+body {
+    background-color: #FAF6F0;
+}
+
+small {
+    padding-left:10px;
+}
+
+.mytable {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.75rem;
+}
+
+/* .paragraph {
+    background-color: #F4DFC8;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border: 2px solid #776B5D;
+    margin: 30px;
+    padding: 10px;
+} */
+
+.textHeading {
+    font-family: "Times New Roman";
+    margin: 30px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.result {
+    background-color: #F4DFC8;
+    font-family: "Times New Roman";
+    border: 2px solid #776B5D;
+    margin: 30px;
+    padding: 10px;
+}
+
+.result_2 {
+    background-color: #F4DFC8;
+    font-family: "Times New Roman";
+    margin: 20px;
+    padding: 5px;
+}
+
+.paragraph {
+    background-color: #F4DFC8;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border: 2px solid #776B5D;
+    margin: 30px;
+    padding: 10px;
+    text-align: left;
+}
+
+.paragraph1 {
+    background-color: #F4DFC8;
+    font-family: "Times New Roman";
+    font-size: 20px;
+    border: 2px solid #776B5D;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
