@@ -312,3 +312,5 @@ def test():
 
 
 
+if __name == "__main__":
+    app.run()(debug=False,host='0.0.0.0')
